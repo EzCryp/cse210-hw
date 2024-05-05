@@ -13,12 +13,19 @@ class Program
 
         // int secretNumber = random.Next(1, 101);
         int secretNumber = randomGenerator.Next(1, 101);
-        int guess = -1;
+        int guess = 0;
 
+        Console.WriteLine("Guess a number between 1 and 100");
+        
         // Use a while loop
+        int guessCount = 0;
         while (guess != secretNumber)
         {
+            guessCount += 1; 
+            
+            
             Console.Write("What is your guess number? ");
+
             guess = int.Parse(Console.ReadLine());
 
             if (secretNumber > guess)
@@ -32,6 +39,7 @@ class Program
             else
             {
                 Console.WriteLine("You guessed it right!");
+                Console.WriteLine($"It took you {guessCount} guesses.");
             }
 
         }                    
