@@ -5,8 +5,7 @@ class Program
     static void Main(string[] args)
     {
         // Ask the user to guess a number and If they guessed the number, tell them they guessed it. If they did not guess the user specified the number...
-        // Console.Write("What is the guess number? ");
-        // int secretNumber = int.Parse(Console.ReadLine());
+      
         
         // Generate a random number
         Random randomGenerator = new Random();
@@ -21,11 +20,13 @@ class Program
         int guessCount = 0;
         while (guess != secretNumber)
         {
+            // provide count of guesses
             guessCount += 1; 
             
-            
+            // Ask the user to guess a number
             Console.Write("What is your guess number? ");
 
+            // store the user's guess in a variable called guess
             guess = int.Parse(Console.ReadLine());
 
             if (secretNumber > guess)
