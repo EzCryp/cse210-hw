@@ -12,40 +12,40 @@ public class Goal
 
     protected int _answer;
 
-     protected int _checklistPoints;
+    protected int _checklistPoints;
 
-     protected int _eternalPoints;
+    protected int _eternalPoints;
 
-      public virtual void GetGoal()
+    public virtual void GetGoal()
     {
-         Console.WriteLine("What is the name of your goal?");
+        Console.WriteLine("What is the name of your goal?");
         _name = Console.ReadLine();
         Console.WriteLine("What is a short description of it?");
         _description = Console.ReadLine();
         Console.WriteLine("What is the amount of points associated with this goal");
         _points = int.Parse(Console.ReadLine());
-        
+
     }
 
-    public  virtual void PrintGoal()
+    public virtual void PrintGoal()
     {
-           if (_check == false)
+        if (_check == false)
         {
             Console.Write("[]");
         }
         else
         {
             Console.Write("[x]");
-            
+
         }
-        Console.WriteLine ($"{_check } {_name} ({_description}) ");
+        Console.WriteLine($"{_check} {_name} ({_description}) ");
 
     }
 
     public int GetTotalPoints()
     {
-        return _totalPoints = _points + _checklistPoints +_eternalPoints;
-       
+        return _totalPoints = _points + _checklistPoints + _eternalPoints;
+
     }
 
 
@@ -54,13 +54,13 @@ public class Goal
         Console.WriteLine($"{_name}");
     }
 
-     public virtual void RecordEvent()
+    public virtual void RecordEvent()
     {
         _answer = int.Parse(Console.ReadLine());
         if (_answer == 1)
-        {   
+        {
             _check = true;
-            _totalPoints += _points+_checklistPoints +_eternalPoints;
+            _totalPoints += _points + _checklistPoints + _eternalPoints;
             Console.WriteLine($"Congratulations you earned {_points} points");
         }
     }
@@ -73,7 +73,7 @@ public class Goal
 
     public virtual string SaveFile()
     {
-        
+
         return $"{_name} {_description} {_points} ";
     }
 

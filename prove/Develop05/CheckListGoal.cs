@@ -3,17 +3,15 @@ public class CheckListGoal : Goal
 
     protected int _extrapoints;
 
-     protected int _bonus;
+    protected int _bonus;
 
-     protected int _done;
+    protected int _done;
 
     public CheckListGoal()
     {
-        
-
     }
 
-     public override void GetGoal()
+    public override void GetGoal()
     {
         Console.WriteLine("Start by naming your goal? ");
         _name = Console.ReadLine();
@@ -31,18 +29,18 @@ public class CheckListGoal : Goal
     public override void PrintGoal()
 
     {
-          {
-           if (_check == false)
         {
-            Console.Write("[]");
+            if (_check == false)
+            {
+                Console.Write("[]");
+            }
+            else
+            {
+                Console.Write("[x]");
+
+            }
+            Console.WriteLine($" {_check} {_name} ({_description}) --- Currently completed: {_done}/{_bonus} ");
         }
-        else
-        {
-            Console.Write("[x]");
-            
-        }
-        Console.WriteLine($" {_check} {_name} ({_description}) --- Currently completed: {_done}/{_bonus} ");
-         }
     }
 
     public override string SaveFile()
@@ -52,13 +50,13 @@ public class CheckListGoal : Goal
 
     public override void RecordEvent()
     {
-         _answer = int.Parse(Console.ReadLine());
+        _answer = int.Parse(Console.ReadLine());
         if (_answer == 3)
-        {   
+        {
             _check = true;
-            _totalPoints =+ _points+_checklistPoints +_eternalPoints;
+            _totalPoints = +_points + _checklistPoints + _eternalPoints;
             Console.WriteLine($"Congratulations you earned {_points} points. Keep it up!");
-            
+
 
         }
     }
