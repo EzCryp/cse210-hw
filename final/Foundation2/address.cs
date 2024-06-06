@@ -21,6 +21,7 @@ class Address
         return _country.Equals("USA", StringComparison.OrdinalIgnoreCase);
     }
 
+    // Add GetFullAddress method
     public string GetFullAddress()
     {
         return $"{_streetAddress}\n{_city}, {_stateProvince}\n{_country}";

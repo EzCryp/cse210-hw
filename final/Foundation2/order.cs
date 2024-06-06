@@ -8,7 +8,7 @@ class Order
         this._products = products;
         this.customer = customer;
     }
-
+    // Calculating total cost of the order
     public double _CalculateTotalCost()
     {
         double totalCost = 0;

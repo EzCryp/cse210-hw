@@ -1,5 +1,7 @@
 class Product
 {
+    // Properties for Product class
+    
     private string _name;
     private string _productId;
     private double _pricePerUnit;
