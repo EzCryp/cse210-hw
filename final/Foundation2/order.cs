@@ -1,20 +1,20 @@
 class Order
 {
-    private List<Product> products;
+    private List<Product> _products;
     private Customer customer;
 
     public Order(List<Product> products, Customer customer)
     {
-        this.products = products;
+        this._products = products;
         this.customer = customer;
     }
 
-    public double CalculateTotalCost()
+    public double _CalculateTotalCost()
     {
         double totalCost = 0;
-        foreach (var product in products)
+        foreach (var product in _products)
         {
-            totalCost += product.GetTotalCost();
+            totalCost += product._GetTotalCost();
         }
 
         // Add shipping cost based on customer location
@@ -23,17 +23,17 @@ class Order
         return totalCost;
     }
 
-    public string GetPackingLabel()
+    public string _GetPackingLabel()
     {
         string packingLabel = "";
-        foreach (var product in products)
+        foreach (var product in _products)
         {
-            packingLabel += $"{product.GetName()} - {product.GetProductId()}\n";
+            packingLabel += $"{product._GetName()} - {product._GetProductId()}\n";
         }
         return packingLabel;
     }
 
-    public string GetShippingLabel()
+    public string _GetShippingLabel()
     {
         return $"{customer.GetName()}\n{customer.GetAddress().GetFullAddress()}";
     }

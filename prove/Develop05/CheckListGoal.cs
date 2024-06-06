@@ -15,15 +15,15 @@ public class CheckListGoal : Goal
 
      public override void GetGoal()
     {
-         Console.WriteLine("Start by naming your goal?");
+        Console.WriteLine("Start by naming your goal? ");
         _name = Console.ReadLine();
-        Console.WriteLine("Please give a short description of the goal?");
+        Console.WriteLine("Please give a short description of the goal? ");
         _description = Console.ReadLine();
-        Console.WriteLine("What is the amount of points associated with this goal");
+        Console.WriteLine("What is the amount of points associated with this goal? ");
         _points = int.Parse(Console.ReadLine());
-        Console.WriteLine("How many times does this goal need to be completed for a bonus");
+        Console.WriteLine("How many times does this goal need to be completed for a bonus? ");
         _bonus = int.Parse(Console.ReadLine());
-        Console.WriteLine("What is the bonus reward for achieiving your goal a certain number of times");
+        Console.WriteLine("What is the bonus reward for achieiving your goal a certain number of times? ");
         _extrapoints = int.Parse(Console.ReadLine());
 
     }

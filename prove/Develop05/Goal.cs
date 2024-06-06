@@ -62,8 +62,6 @@ public class Goal
             _check = true;
             _totalPoints += _points+_checklistPoints +_eternalPoints;
             Console.WriteLine($"Congratulations you earned {_points} points");
-
-
         }
     }
 
