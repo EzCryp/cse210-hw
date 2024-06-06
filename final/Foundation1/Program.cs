@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
        // Set 3-4 videos with 3-4 comments
-        Video video01 = new Video("Financial Freedom 2024", "Author01", 600);
+        Video video01 = new Video("Financial Freedom 2024", "Author01", 660);
         video01.AddComment("User1", "Thanks!");
         video01.AddComment("User2", "I learned a lot!");
         video01.AddComment("User3", "What do you by mortgage?");
